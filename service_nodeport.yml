@@ -6,7 +6,7 @@ metadata:
     app: wordpress
   namespace: wordpress
 spec:
-  type: Nodeport
+  type: NodePort
   selector:
     app: wordpress
     tier: frontend
