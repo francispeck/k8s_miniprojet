@@ -32,12 +32,12 @@ spec:
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: wordpress_secret
+              name: wordpress-db-password
               key: mysql_password
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: wordpress_secret
+              name: wordpress-db-password
               key: mysql_root_password
         ports:
         - containerPort: 3306
