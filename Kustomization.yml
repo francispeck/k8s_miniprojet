@@ -1,4 +1,4 @@
-- docker-compose.yml
+resources:
 - service_clusterip.yml
 - service_nodeport.yml
 - wordpress_app_deployment.yml
