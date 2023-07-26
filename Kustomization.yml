@@ -1,0 +1,7 @@
+- docker-compose.yml
+- service_clusterip.yml
+- service_nodeport.yml
+- wordpress_app_deployment.yml
+- wordpress_namespace.yml
+- wordpress_secret.yml
+- wp_mysql_deployment.yml
