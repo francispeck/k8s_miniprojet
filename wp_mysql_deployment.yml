@@ -12,7 +12,7 @@ spec:
       app: wordpress
       tier: mysql
   strategy:
-    type: recreate
+    type: Recreate
   template:
     metadata:
       labels:
