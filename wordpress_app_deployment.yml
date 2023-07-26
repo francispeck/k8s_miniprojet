@@ -22,11 +22,11 @@ spec:
         image: wordpress:latest
         env:
         - name: WORDPRESS_DB_USER
-        - value: toto
+          value: toto
         - name: WORDPRESS_DB_NAME
-        - value: wordpress
+          value: wordpress
         - name: WORDPRESS_DB_HOST
-        - value: wp-mysql
+          value: wp-mysql
         - name: WORDPRESS_DB_PASSWORD
           valueFrom:
             secretKeyRef:
