@@ -23,21 +23,19 @@ spec:
       - name: mysql
         image: mysql:5.7
         env:
-        - name: WORDPRESS_DB_USER
-          value: toto
-        - name: WORDPRESS_DATABASE
+        - name: MYSQL_DATABASE
           value: wordpress
         - name: MYSQL_USER
-          value: wp-mysql
+          value: toto
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: wordpress-db-password
+              name: wordpress-secret
               key: mysql_password
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: wordpress-db-password
+              name: wordpress-secret
               key: mysql_root_password
         ports:
         - containerPort: 3306
