@@ -3,5 +3,5 @@ resources:
   - service_nodeport.yml
   - wordpress_app_deployment.yml
   - wordpress_namespace.yml
-  - wordpress-secret.yml
+  - app-wordpress-secret.yml
   - wp_mysql_deployment.yml
