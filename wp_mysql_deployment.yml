@@ -8,7 +8,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
+    matchLabels: 
       app: wordpress
       tier: mysql
   strategy:
@@ -20,8 +20,8 @@ spec:
         tier: mysql
     spec:
       containers:
-      - name: mysql
-        image: mysql:5.7
+      - image: mysql:5.7
+        name: mysql
         env:
         - name: MYSQL_DATABASE
           value: wordpress
@@ -30,20 +30,20 @@ spec:
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: wordpress-secret
+              name: app-wordpress-secret
               key: mysql_password
-        - name: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_RANDOM_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: wordpress-secret
-              key: mysql_root_password
+              name: app-wordpress-secret
+              key: mysql_random_root_password
         ports:
         - containerPort: 3306
           name: mysql
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
-      volumes:  
+      volumes:
       - name: mysql-persistent-storage
         hostPath:
           path: /data/mysql
