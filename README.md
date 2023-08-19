@@ -1,4 +1,4 @@
-## k8s_miniprojet
+## Déploiement de l'application Wordpress via kubernetes
 
 - L’appli Wordpress est composé d’un front et d’un back, la partie BDD Mysql
 
