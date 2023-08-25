@@ -1,4 +1,4 @@
-## k8s_miniprojet
+## Installation de l'application Wordpress via K8s
 
 - L’appli Wordpress est composé d’un front et d’un back, la partie BDD Mysql
 
